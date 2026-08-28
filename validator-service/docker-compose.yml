@@ -1,0 +1,52 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: validaas-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: valaas
+      POSTGRES_USER: valaas
+      POSTGRES_PASSWORD: valaas
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: validaas-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+  nats:
+    image: nats:2.10-alpine
+    container_name: validaas-nats
+    command: ["-js", "-m", "8222"]
+    restart: unless-stopped
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  validator-service:
+    build:
+      context: .
+    container_name: validaas-validator-service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+      - nats
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/valaas
+      SPRING_DATASOURCE_USERNAME: valaas
+      SPRING_DATASOURCE_PASSWORD: valaas
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      NATS_URL: nats://nats:4222
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:

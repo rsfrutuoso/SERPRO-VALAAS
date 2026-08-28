@@ -1,9 +1,1 @@
-com/valaas/validator/domain/model/ValidationRequest$Builder.class
-com/valaas/validator/configuration/UseCaseConfiguration.class
-com/valaas/validator/ValidatorServiceApplication.class
-com/valaas/validator/adapter/in/rest/ValidationController.class
-com/valaas/validator/adapter/out/persistence/InMemoryValidationRequestRepository.class
-com/valaas/validator/application/port/in/CreateValidationCommand.class
-com/valaas/validator/domain/model/ValidationRequest.class
-com/valaas/validator/application/port/out/ValidationRequestRepository.class
-com/valaas/validator/application/usecase/CreateValidationUseCase.class
+com/valaas/validator/adapter/out/events/NoopValidationEventPublisher.class

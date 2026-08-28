@@ -1,6 +1,7 @@
 package com.valaas.validator.application.usecase;
 
 import com.valaas.validator.application.port.in.CreateValidationCommand;
+import com.valaas.validator.application.port.out.ValidationEventPublisher;
 import com.valaas.validator.application.port.out.ValidationRequestRepository;
 import com.valaas.validator.domain.model.ValidationRequest;
 
@@ -9,9 +10,16 @@ import java.util.UUID;
 public class CreateValidationUseCase {
 
     private final ValidationRequestRepository repository;
+    private final ValidationEventPublisher eventPublisher;
 
     public CreateValidationUseCase(ValidationRequestRepository repository) {
+        this(repository, request -> {
+        });
+    }
+
+    public CreateValidationUseCase(ValidationRequestRepository repository, ValidationEventPublisher eventPublisher) {
         this.repository = repository;
+        this.eventPublisher = eventPublisher;
     }
 
     public ValidationRequest execute(CreateValidationCommand command) {
@@ -33,7 +41,9 @@ public class CreateValidationUseCase {
                 .idempotencyKey(idempotencyKey)
                 .build();
 
-        return repository.save(request);
+        ValidationRequest saved = repository.save(request);
+        eventPublisher.publishValidationCreated(saved);
+        return saved;
     }
 
     private String requireText(String value, String fieldName) {

@@ -1,8 +1,15 @@
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/ValidatorServiceApplication.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/in/rest/ValidationController.java
-/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/persistence/InMemoryValidationRequestRepository.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/events/NatsValidationEventPublisher.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/events/NoopValidationEventPublisher.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/persistence/PersistedValidationRequest.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/persistence/ValidationRequestJpaRepository.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/adapter/out/persistence/ValidationRequestJpaRepositoryAdapter.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/port/in/CreateValidationCommand.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/port/out/ValidationEventPublisher.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/port/out/ValidationRequestRepository.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/service/ValidationRequestQueryService.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/usecase/CreateValidationUseCase.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/SecurityConfiguration.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/UseCaseConfiguration.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/domain/model/ValidationRequest.java

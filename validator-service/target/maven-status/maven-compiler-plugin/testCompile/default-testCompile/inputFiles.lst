@@ -1,6 +1,10 @@
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/adapter/in/rest/ValidationControllerTest.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/adapter/out/persistence/InMemoryValidationRequestRepositoryTest.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/adapter/out/persistence/ValidationRequestJpaRepositoryAdapterTest.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/application/service/ValidationRequestQueryServiceTest.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/application/usecase/CreateValidationUseCaseEventPublisherTest.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/application/usecase/CreateValidationUseCaseTest.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/architecture/ArchitectureTest.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/configuration/UseCaseConfigurationTest.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/domain/model/ValidationRequestTest.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/test/java/com/valaas/validator/security/SecurityConfigurationTest.java

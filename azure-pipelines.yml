@@ -1,0 +1,48 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  azureSubscription: 'VALAAS-AZURE-SUBSCRIPTION'
+  resourceGroup: 'rg-valaas'
+  containerAppName: 'ca-valaas-validator'
+  acrName: 'acrvalaas'
+  imageName: 'validator-service'
+  imageTag: '$(Build.SourceVersion)'
+
+steps:
+  - checkout: self
+
+  - task: AzureCLI@2
+    displayName: Build and push container image
+    inputs:
+      azureSubscription: $(azureSubscription)
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az extension add --name containerapp --upgrade
+        az acr login --name $(acrName)
+        docker build -t $(acrName).azurecr.io/$(imageName):$(imageTag) ./validator-service
+        docker push $(acrName).azurecr.io/$(imageName):$(imageTag)
+
+  - task: AzureCLI@2
+    displayName: Update Azure Container App
+    inputs:
+      azureSubscription: $(azureSubscription)
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az containerapp update \
+          --name $(containerAppName) \
+          --resource-group $(resourceGroup) \
+          --image "$(acrName).azurecr.io/$(imageName):$(imageTag)" \
+          --set-env-vars SPRING_PROFILES_ACTIVE=docker
