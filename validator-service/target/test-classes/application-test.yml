@@ -13,6 +13,22 @@ spring:
         format_sql: true
   flyway:
     enabled: false
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+valaas:
+  cache:
+    enabled: false
+  messaging:
+    enabled: false
+  security:
+    username: test-user
+    password: test-pass
+
+nats:
+  url: nats://localhost:4222
 
 logging:
   level:

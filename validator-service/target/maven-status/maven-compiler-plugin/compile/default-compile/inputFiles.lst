@@ -10,6 +10,8 @@
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/port/out/ValidationRequestRepository.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/service/ValidationRequestQueryService.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/application/usecase/CreateValidationUseCase.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/CacheConfiguration.java
+/Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/NatsConfiguration.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/SecurityConfiguration.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/configuration/UseCaseConfiguration.java
 /Users/rodolfofrutuoso/Documents/TEGRA/SERPRO/VALID/validator-service/src/main/java/com/valaas/validator/domain/model/ValidationRequest.java

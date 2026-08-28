@@ -45,6 +45,10 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: 6379
       NATS_URL: nats://nats:4222
+      VALAAS_CACHE_ENABLED: "true"
+      VALAAS_MESSAGING_ENABLED: "true"
+      VALAAS_SECURITY_USERNAME: validaas-admin
+      VALAAS_SECURITY_PASSWORD: ChangeMeStrongPassword123!
     ports:
       - "8080:8080"
 
