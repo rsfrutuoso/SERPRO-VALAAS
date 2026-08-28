@@ -1,0 +1,5 @@
+com/valaas/validator/application/usecase/CreateValidationUseCaseTest.class
+com/valaas/validator/adapter/in/rest/ValidationControllerTest.class
+com/valaas/validator/architecture/ArchitectureTest.class
+com/valaas/validator/configuration/UseCaseConfigurationTest.class
+com/valaas/validator/adapter/out/persistence/InMemoryValidationRequestRepositoryTest.class
