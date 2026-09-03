@@ -1,0 +1,10 @@
+com/valaas/validator/application/usecase/CreateValidationUseCaseTest.class
+com/valaas/validator/adapter/in/rest/ValidationControllerTest.class
+com/valaas/validator/adapter/out/persistence/ValidationRequestJpaRepositoryAdapterTest.class
+com/valaas/validator/configuration/UseCaseConfigurationTest.class
+com/valaas/validator/security/SecurityConfigurationTest.class
+com/valaas/validator/application/service/ValidationRequestQueryServiceTest.class
+com/valaas/validator/architecture/ArchitectureTest.class
+com/valaas/validator/application/usecase/CreateValidationUseCaseEventPublisherTest.class
+com/valaas/validator/domain/model/ValidationRequestTest.class
+com/valaas/validator/adapter/out/persistence/InMemoryValidationRequestRepositoryTest.class

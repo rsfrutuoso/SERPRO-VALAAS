@@ -46,6 +46,9 @@ public class NatsValidationEventPublisher implements ValidationEventPublisher {
             throw new IllegalStateException("Unable to serialize validation event payload", e);
         } catch (TimeoutException e) {
             throw new IllegalStateException("Timed out while flushing validation event to NATS", e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new IllegalStateException("Interrupted while flushing validation event to NATS", e);
         }
     }
 }
